@@ -1,8 +1,19 @@
 #root{
-    --bg-color : #FBEED7
-    --secondary : #d9c19D
-    --text : #2e1402
-    --alternate : #946d43
-    --extra-lighter : #B7966B
-    --extra-darker : #724A24
+    --bg-color : #FBEED7;
+    --secondary : #d9c19D;
+    --text : #2e1402;
+    --alternate : #946d43;
+    --extra-lighter : #B7966B;
+    --extra-darker : #724A24;
 }
+
+.background-blur {
+    background-image: url("./images/start-museum-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    filter: blur(8px);
+}
+
