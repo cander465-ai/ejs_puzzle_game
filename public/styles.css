@@ -17,4 +17,8 @@
     filter: blur(20px);
     z-index: -1;
 }
-
+.game-box{
+    background-color:#724A24;
+    display: flex;
+    flex-direction: column;
+}
