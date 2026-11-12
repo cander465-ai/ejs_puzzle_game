@@ -1,0 +1,26 @@
+{
+  "name": "ejs_puzzle_game",
+  "version": "1.0.0",
+  "description": "We make a puzzle game in EJS | Puzzle type Museum Heist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cander465-ai/ejs_puzzle_game.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cander465-ai/ejs_puzzle_game/issues"
+  },
+  "homepage": "https://github.com/cander465-ai/ejs_puzzle_game#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0"
+  }
+}
