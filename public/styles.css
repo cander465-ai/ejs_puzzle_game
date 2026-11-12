@@ -8,12 +8,13 @@
 }
 
 .background-blur {
-    background-image: url("./images/start-museum-background.jpg");
+    background-image: url("/images/start-museum-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
     margin: 0;
-    filter: blur(8px);
+    filter: blur(20px);
+    z-index: -1;
 }
 
