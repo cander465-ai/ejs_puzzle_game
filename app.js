@@ -11,6 +11,18 @@ app.get(('/'), (req, res) => {
     res.render('index')
 })
 
+app.get(('/play/:id'), (req, res) => {
+
+})
+
+app.post(('/play/:id'), (req, res) => {
+
+})
+
+app.get(('/victory/:id'), (req, res) => {
+
+})
+
 app.listen(3000, ()=>{
     console.log(`EJS Puzzle Game on http://localhost:3000`)
 })

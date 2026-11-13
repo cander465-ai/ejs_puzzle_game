@@ -14,11 +14,20 @@
     background-size: cover;
     min-height: 100vh;
     margin: 0;
-    filter: blur(20px);
+    backdrop-filter: blur(5px);
     z-index: -1;
+    /* below centers the content to the page */
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
-.game-box{
+
+.game-box {
     background-color:#724A24;
+    border: 1px;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    width: 80vw;
 }
