@@ -1,10 +1,24 @@
-#root{
-    --bg-color : #FBEED7;
-    --secondary : #d9c19D;
-    --text : #2e1402;
-    --alternate : #946d43;
-    --extra-lighter : #B7966B;
-    --extra-darker : #724A24;
+:root {
+    --bg-color: #FBEED7;
+    --secondary: #d9c19D;
+    --text: #2e1402;
+    --alternate: #946d43;
+    --extra-lighter: #B7966B;
+    --extra-darker: #724A24;
+}
+
+@font-face {
+    font-family: "Font 91";
+    src: url("/fonts/font91.ttf")
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .background-blur {
@@ -16,18 +30,84 @@
     margin: 0;
     backdrop-filter: blur(5px);
     z-index: -1;
-    /* below centers the content to the page */
-    display:flex;
+    font-family: "Font 91";
+
+    /* below centers the content (game box) to the page */
+
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.game-box {
-    background-color:#724A24;
-    border: 1px;
+.game-box { /* the rectangle in the middle of each page containing the game*/
+    background-color: var(--alternate);
+    border: 5px solid black;
+    border-radius: 1cap;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    justify-content: space-evenly;
+    margin: 1vh 1vw 1vh 1vw;
     width: 80vw;
+    height: 80vh;
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
+    animation-delay: 1s;
+    
 }
+
+.header {
+    font-size: 400%;
+    color: black;
+    margin-bottom: 0;
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in-out forwards; 
+    animation-delay: 2s;
+
+}
+
+.story-text {
+    background-color: var(--text);
+    border: 5px solid var(--text);
+    border-radius: 0.25cap;
+    color: white;
+    width: 80%;
+    font-size: 150%;
+    margin: 0 auto;
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in-out forwards; 
+    animation-delay: 2.25s;
+}
+
+.play-button {
+    width: 30vw;
+    font-size: 350%;
+    margin: 0 auto;
+    font-family: "Font 91";
+    background-color: var(--bg-color);
+    border: 5px solid black;
+    border-radius: 0.25cap;
+
+    transition: font-size 0.3s ease;
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in-out forwards; 
+    animation-delay: 2.5s;
+
+}
+
+.play-button:hover {
+    font-size: 385%;
+}
+
