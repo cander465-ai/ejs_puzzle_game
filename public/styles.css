@@ -96,7 +96,6 @@
     margin: 0 auto;
 
     /* starting animation */
-
     opacity: 0; 
     animation: fadeIn 0.5s ease-in-out forwards; 
     animation-delay: 2.25s;
@@ -105,7 +104,7 @@
 .play-button {
     width: 30vw;
     font-size: 350%;
-    margin: 0 auto;
+    margin-top: 0 auto;
     font-family: "Font 91";
     background-color: var(--bg-color);
     border: 5px solid var(--bg-color);
@@ -203,7 +202,9 @@ input[type="text"] {
     background: transparent;
     padding: 10px;
 }
-
+input[type='text']:hover{
+    
+}
 .level-header {
     color: var(--text);
 
