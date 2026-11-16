@@ -197,6 +197,13 @@
     border-radius: 1cap;
 }
 
+input[type="text"] {
+    flex: 1; /* forces the input to expand and fill the container */
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
 .level-header {
     color: var(--text);
 
