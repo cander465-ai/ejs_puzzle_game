@@ -12,7 +12,7 @@ app.get(('/'), (req, res) => {
 })
 
 app.get(('/play/:id'), (req, res) => {
-
+    res.render(`level${req.params.id}`)
 })
 
 app.post(('/play/:id'), (req, res) => {
@@ -23,6 +23,6 @@ app.get(('/victory/:id'), (req, res) => {
 
 })
 
-app.listen(3000, ()=>{
-    console.log(`EJS Puzzle Game on http://localhost:3000`)
+app.listen(5000, ()=>{
+    console.log(`EJS Puzzle Game on http://localhost:5000`)
 })

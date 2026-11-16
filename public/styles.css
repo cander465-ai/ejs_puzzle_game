@@ -21,6 +21,15 @@
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .background-blur {
     background-image: url("/images/start-museum-background.jpg");
     background-repeat: no-repeat;
@@ -35,31 +44,15 @@
     /* below centers the content (game box) to the page */
 
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.game-box { /* the rectangle in the middle of each page containing the game*/
-    background-color: var(--alternate);
-    border: 5px solid black;
-    border-radius: 1cap;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 1vh 1vw 1vh 1vw;
-    width: 80vw;
-    height: 80vh;
+/* -------------------- THESE CLASSES ARE JUST FOR THE START PAGE -------------------- */
 
-    /* starting animation */
-
-    opacity: 0; 
-    animation: fadeIn 1s ease-in-out forwards; 
-    animation-delay: 1s;
-    
-}
-
-.header {
+.header { /* !! THIS IS ONLY FOR THE START PAGE!! */
     font-size: 400%;
     color: black;
     margin-bottom: 0;
@@ -72,7 +65,26 @@
 
 }
 
-.story-text {
+.starter-box {
+    background-color: var(--extra-darker);
+    border: 5px solid rgba(0);
+    border-radius: 1cap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1vh 1vw 1vh 1vw;
+    width: 80vw;
+    height: 80vh;
+
+    /* starting animation */
+
+    opacity: 1; 
+    animation: fadeIn 1s ease-in-out reverse infinite; 
+    animation-delay: 1s;
+    
+}
+
+.starter-text {
     background-color: var(--text);
     border: 5px solid var(--text);
     border-radius: 0.25cap;
@@ -94,7 +106,7 @@
     margin: 0 auto;
     font-family: "Font 91";
     background-color: var(--bg-color);
-    border: 5px solid black;
+    border: 5px solid var(--bg-color);
     border-radius: 0.25cap;
 
     transition: font-size 0.3s ease;
@@ -109,5 +121,80 @@
 
 .play-button:hover {
     font-size: 385%;
+}
+
+/* -------------------- THESE CLASSES ARE FOR LEVELS -------------------- */
+
+.intro-text {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+
+    opacity: 0; 
+    animation: fadeOut 1s ease-in-out backwards;
+    animation-delay: 3s;  
+}
+
+.game-box { /* the rectangle in the middle of each page containing the game*/
+    background-color: var(--secondary);
+    border: 5px solid rgba(0);
+    border-radius: 1cap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1vh 1vw 1vh 1vw;
+    width: 80%;
+    min-height: 80vh;
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
+    animation-delay: 5s;
+    
+}
+
+.level-box { /* the rectangle in the middle of each page containing the game*/
+    background-color: var(--extra-darker);
+    border: 5px solid var(--extra-darker);
+    border-radius: 1cap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    margin: 1vh 1vw 1vh 1vw;
+    width: 97%;
+    min-height: 70vh;
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
+    animation-delay: 5s;
+    
+}
+
+.answer {
+    display: flex;
+    align-self: center;
+    width: 98%;
+    box-sizing: border-box;
+    margin: 2vh 1vw 2vh 1vw;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 1cap;
+}
+
+.level-header {
+    color: var(--text);
+
+    /* starting animation */
+
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
+    animation-delay: 5s;
+
 }
 
