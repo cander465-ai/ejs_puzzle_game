@@ -10,12 +10,11 @@ let levelInfo = [
         And beat with historys frozen Heart.
         Though silent am I, I speak of the past-
         What am I?`,
-        correctAnswer: ""
+        correctAnswer: "museum"
     },
     {
         level: 2,
         introText: `You blow by the door with ease, almost insluted by the easiness of that riddle.
-
         Ahead of you feels crowded although there isn’t anybody there, all of a sudden you hear a  deep voice...`, 
         levelHeader: "LEVEL TWO : GHASTLY GUARDS",
         levelObjective: "",
@@ -23,31 +22,28 @@ let levelInfo = [
         They demand, “GET OUT!”
         
         What do you do?`,
-        correctAnswer: ""
+        correctAnswer: "runaway"
     },
     {
         level: 3,
         introText: `Now your a little freaked out. Trying to make sense of the things you analyze your surrondings.
-
         Your hope fades quickly, as you encounter a statue of Dictator Perpotuo.`, 
         levelHeader: "LEVEL THREE : STILL DICTATOR",
         levelObjective: "",
         levelMain: `Before you, a statue of Julius Caesar. 
         To his right, what looks to be a door yet it is blocked.
         He holds a plate that says, “Zkr dp L”`,
-        correctAnswer: ""
+        correctAnswer: "who am i"
     },
     {
         level: 4,
         introText: `The general opens the door, you start abandoning the idea of getting rich off this place.
-
         One thing resonates in your mind, “Get me out of here”. As you once again tremble before a puzzle.
-
         This time at the end of the long corridor`, 
         levelHeader: "LEVEL FOUR : HALLWAY HOPE",
         levelObjective: "",
         levelMain: `This puzzle is much less intimidating, yet its pretty cramped in here so the faster you get it done the better. The Plate on the wall says “ZTYZHS” which makes you want to bash your head against it.`,
-        correctAnswer: ""
+        correctAnswer: "atbash"
     },
     {
         level: 5,
@@ -60,7 +56,7 @@ let levelInfo = [
         Let go of "correct," let the other remain,
         Learn what I am—I am plain to explain.
         Which way do you go?`,
-        correctAnswer: ""
+        correctAnswer: "left"
     },
     {
         level: 6,
@@ -70,7 +66,7 @@ let levelInfo = [
         levelObjective: "",
         levelMain: `The Ghost Guards the exit, Clearly his intentions have changed as he wobbily aims the spear at you. 
         What do you do?`,
-        correctAnswer: ""
+        correctAnswer: "grabit"
     },
 
 ]
