@@ -10,9 +10,10 @@
                     <%= levelMain %>
                 </p>
             </div>
-            <form class="answer" action="submit" method="POST">
-                <input type="text" placeholder="Type answer here..."> 
+            <form class="answer" action="/play/<%= level %>" method="POST">
+                <input type="text" name="userAnswer" placeholder="Type answer here..." required> 
             </form>
+
 
         </main>
 
