@@ -109,7 +109,7 @@
     background-color: var(--bg-color);
     border: 5px solid var(--bg-color);
     border-radius: 0.25cap;
-
+    padding: 10px;
     transition: font-size 0.3s ease;
 
     /* starting animation */
@@ -117,8 +117,8 @@
     opacity: 0; 
     animation: fadeIn 0.5s ease-in-out forwards; 
     animation-delay: 2.5s;
-
 }
+
 
 .play-button:hover {
     font-size: 385%;
@@ -202,9 +202,7 @@ input[type="text"] {
     background: transparent;
     padding: 10px;
 }
-input[type='text']:hover{
-    
-}
+
 .level-header {
     color: var(--text);
 
