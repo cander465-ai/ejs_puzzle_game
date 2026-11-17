@@ -1,18 +1,20 @@
-<p class="intro-text"><%= introText %></p>
+<body class="background-blur">
 
-<h1 class="level-header"><%= levelHeader %></h1>
-    <main class="game-box">
-        <div class="level-box">
-            <p class="level-objective"><%= levelObjective %></p>
-            <p class ="level-main">
-                <%= levelMain %>
-            </p>
-        </div>
-        <form class="answer" action="submit" method="POST">
-            <input type="text" placeholder="Type answer here..."> 
-        </form>
+    <p class="intro-text"><%= introText %></p>
 
-    </main>
+    <h1 class="level-header"><%= levelHeader %></h1>
+        <main class="game-box">
+            <div class="level-box">
+                <p class="level-objective"><%= levelObjective %></p>
+                <p class ="level-main">
+                    <%= levelMain %>
+                </p>
+            </div>
+            <form class="answer" action="submit" method="POST">
+                <input type="text" placeholder="Type answer here..."> 
+            </form>
+
+        </main>
 
 </body>
 </html>

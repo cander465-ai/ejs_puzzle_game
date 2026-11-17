@@ -13,18 +13,18 @@ app.get(('/'), (req, res) => {
 })
 
 app.get(('/play/:id'), (req, res) => {
-    res.render(`level${req.params.id}`)
+    // res.render(`level${req.params.id}`)
 
-    // const currentLevel = levelInfo.find(l => l.level === Number(req.params.id))
+    const currentLevel = levelInfo.find(l => l.level === Number(req.params.id))
 
     
-    // res.render('testLevel', {
-    //     level: currentLevel.level,
-    //     introText: currentLevel.introText,
-    //     levelHeader: currentLevel.levelHeader,
-    //     levelObjective: currentLevel.levelObjective,
-    //     levelMain: currentLevel.levelMain
-    // }) -- nyakeh's code, will figure out later
+    res.render('level', {
+        level: currentLevel.level,
+        introText: currentLevel.introText,
+        levelHeader: currentLevel.levelHeader,
+        levelObjective: currentLevel.levelObjective,
+        levelMain: currentLevel.levelMain
+    })
 })
 
 app.post(('/play/:id'), (req, res) => {

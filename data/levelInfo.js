@@ -1,7 +1,7 @@
 let levelInfo = [
     {
         level: 1,
-        introText: ``, 
+        introText: `Welcome to the museum!`, 
         levelHeader: "LEVEL ONE : THE DOOR",
         levelObjective: "Solve this riddle to pass through the door.",
         levelMain: `I have a home of marble stone,
