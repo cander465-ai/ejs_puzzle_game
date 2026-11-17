@@ -137,13 +137,13 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 500%;
+    font-size: 400%;
 
     
 
     opacity: 0; 
     animation: fadeOut 1s ease-in-out backwards;
-    animation-delay: 3s;  
+    animation-delay: 3.5s;  
 }
 
 .game-box { /* the rectangle in the middle of each page containing the game*/
@@ -219,7 +219,7 @@ input[type="text"]:focus {
     text-align: center;
     font-size: x-large;
     display: flex;
-    width: 40vw;
+    width: 42vw;
     justify-content: center;
     align-items: center;
     margin-left: 18vw;
