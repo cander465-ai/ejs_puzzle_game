@@ -16,11 +16,12 @@ app.get(('/'), (req, res) => {
 app.get(('/play/:id'), (req, res) => {
     // res.render(`level${req.params.id}`)
 
-    const currentLevel = levelInfo.find(l => l.level === Number(req.params.id))
+    const currentLevel = levelInfo.find(l => l.route === req.params.id)
 
     
     res.render('level', {
         level: currentLevel.level,
+        route: currentLevel.route,
         introText: currentLevel.introText,
         levelHeader: currentLevel.levelHeader,
         levelObjective: currentLevel.levelObjective,
@@ -29,21 +30,30 @@ app.get(('/play/:id'), (req, res) => {
 })
 
 app.post('/play/:id', (req, res) => {
-    const levelId = Number(req.params.id)
-    const currentLevel = levelInfo.find(l => l.level === levelId)
-    
-    const submittedAnswer = req.body.userAnswer.toLowerCase()
-    const correctAnswer = currentLevel.correctAnswer
+    // 1. Find the current level by its route string
+    const currentLevel = levelInfo.find(l => l.route === req.params.id)
+
+    if (!currentLevel) {
+        return res.status(404).send('Level not found')
+    }
+
+    // 2. Normalize both strings so casing and spaces match
+    const submittedAnswer = String(req.body.userAnswer || '').trim().toLowerCase()
+    const correctAnswer = String(currentLevel.correctAnswer).trim().toLowerCase()
 
     if (submittedAnswer === correctAnswer) {
-        if (currentLevel.level != 6) { // because level 6 is the last level
-            res.redirect(`/play/${levelId+1}`)
+        if (currentLevel.level !== 6) {
+            // 3. Safely find the next level using currentLevel.level + 1
+            const nextLevel = levelInfo.find(l => l.level === currentLevel.level + 1)
+            res.redirect(`/play/${nextLevel.route}`)
         } else {
-            res.redirect('/victory/:id')
+            // 4. Use backticks so the actual route is inserted
+            res.redirect(`/victory/${currentLevel.route}`)
         }
     } else {
         res.render('level', {
             level: currentLevel.level,
+            route: currentLevel.route, // Pass route so the form action stays accurate
             introText: "Try again!",
             levelHeader: currentLevel.levelHeader,
             levelObjective: currentLevel.levelObjective,
@@ -51,6 +61,7 @@ app.post('/play/:id', (req, res) => {
         })
     }
 })
+
 
 
 app.get(('/victory/:id'), (req, res) => {

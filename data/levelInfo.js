@@ -1,5 +1,6 @@
 let levelInfo = [
     { 
+        route: "lA90Y6hkLn",
         level: 1,
         introText: `Welcome to the museum!`, 
         levelHeader: "LEVEL ONE : THE DOOR",
@@ -13,6 +14,7 @@ let levelInfo = [
         correctAnswer: "museum"
     },
     {
+        route: "p0lk8Iogzm",
         level: 2,
         introText: `You blow by the door with ease, almost insluted by the easiness of that riddle.
         Ahead of you feels crowded although there isn’t anybody there, all of a sudden you hear a  deep voice...`, 
@@ -25,6 +27,7 @@ let levelInfo = [
         correctAnswer: "runaway"
     },
     {
+        route: "f10bYao4bu",
         level: 3,
         introText: `Now your a little freaked out. Trying to make sense of the things you analyze your surrondings.
         Your hope fades quickly, as you encounter a statue of Dictator Perpotuo.`, 
@@ -36,6 +39,7 @@ let levelInfo = [
         correctAnswer: "who am i"
     },
     {
+        route: "h8Ims0unMl",
         level: 4,
         introText: `The general opens the door, you start abandoning the idea of getting rich off this place.
         One thing resonates in your mind, “Get me out of here”. As you once again tremble before a puzzle.
@@ -46,6 +50,7 @@ let levelInfo = [
         correctAnswer: "atbash"
     },
     {
+        route: "rY9m56b1w9",
         level: 5,
         introText: `Feeling Accomplished from the last puzzle you speed down the hallway.
         Suddenly the hallway splits, there are now four paths, one to your LEFT,RIGHT,FRONT and BACK.`, 
@@ -59,6 +64,7 @@ let levelInfo = [
         correctAnswer: "left"
     },
     {
+        route: "67yhgmBlhz",
         level: 6,
         introText: `You guessed LEFT, the door shut behind you. You shudder then another door opens it front of you revealing light. 
         The exit has been open yet before it stands one of the ghosts from the entrance to the museum holding a ancient spear`, 
