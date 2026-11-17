@@ -212,12 +212,11 @@ input[type="text"]:focus {
 .level-objective{
     font-size: xx-large;
     font-weight: bold;
-    margin-top: -4vw;
     color: var(--secondary);
 }
 .level-main{
     text-align: center;
-    font-size: x-large;
+    font-size: 230%;
     display: flex;
     width: 42vw;
     justify-content: center;
