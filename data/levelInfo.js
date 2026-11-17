@@ -17,7 +17,7 @@ let levelInfo = [
         introText: `You blow by the door with ease, almost insluted by the easiness of that riddle.
         Ahead of you feels crowded although there isn’t anybody there, all of a sudden you hear a  deep voice...`, 
         levelHeader: "LEVEL TWO : GHASTLY GUARDS",
-        levelObjective: "",
+        levelObjective: "Solve the word ladder to progress.",
         levelMain: `Ghostly forms appear behind you attempting to grab you.
         They demand, “GET OUT!”
         
@@ -29,7 +29,7 @@ let levelInfo = [
         introText: `Now your a little freaked out. Trying to make sense of the things you analyze your surrondings.
         Your hope fades quickly, as you encounter a statue of Dictator Perpotuo.`, 
         levelHeader: "LEVEL THREE : STILL DICTATOR",
-        levelObjective: "",
+        levelObjective: "Decrypt the message to progress.",
         levelMain: `Before you, a statue of Julius Caesar. 
         To his right, what looks to be a door yet it is blocked.
         He holds a plate that says, “Zkr dp L”`,
@@ -41,7 +41,7 @@ let levelInfo = [
         One thing resonates in your mind, “Get me out of here”. As you once again tremble before a puzzle.
         This time at the end of the long corridor`, 
         levelHeader: "LEVEL FOUR : HALLWAY HOPE",
-        levelObjective: "",
+        levelObjective: "Decrypt the message to progress.",
         levelMain: `This puzzle is much less intimidating, yet its pretty cramped in here so the faster you get it done the better. The Plate on the wall says “ZTYZHS” which makes you want to bash your head against it.`,
         correctAnswer: "atbash"
     },
@@ -50,7 +50,7 @@ let levelInfo = [
         introText: `Feeling Accomplished from the last puzzle you speed down the hallway.
         Suddenly the hallway splits, there are now four paths, one to your LEFT,RIGHT,FRONT and BACK.`, 
         levelHeader: "LEVEL FIVE : THE CHOICE.",
-        levelObjective: "",
+        levelObjective: "Turn in the correct direction to progress.",
         levelMain: `Linger a moment, consider what stays,
         Lost by the crowd in the rush of their days.
         Let go of "correct," let the other remain,
@@ -63,7 +63,7 @@ let levelInfo = [
         introText: `You guessed LEFT, the door shut behind you. You shudder then another door opens it front of you revealing light. 
         The exit has been open yet before it stands one of the ghosts from the entrance to the museum holding a ancient spear`, 
         levelHeader: "LEVEL SIX : FINALLY FREE",
-        levelObjective: "",
+        levelObjective: "Complete the word ladder to progress.",
         levelMain: `The Ghost Guards the exit, Clearly his intentions have changed as he wobbily aims the spear at you. 
         What do you do?`,
         correctAnswer: "grabit"
