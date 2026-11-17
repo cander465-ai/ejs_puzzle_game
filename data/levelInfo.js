@@ -1,5 +1,5 @@
 let levelInfo = [
-    {
+    { 
         level: 1,
         introText: `Welcome to the museum!`, 
         levelHeader: "LEVEL ONE : THE DOOR",
