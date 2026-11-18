@@ -23,14 +23,7 @@ app.get(('/play/:id'), (req, res) => {
     }
 
     
-    res.render('level', {
-        level: currentLevel.level,
-        route: currentLevel.route,
-        introText: currentLevel.introText,
-        levelHeader: currentLevel.levelHeader,
-        levelObjective: currentLevel.levelObjective,
-        levelMain: currentLevel.levelMain
-    })
+    res.render('level', currentLevel)
 })
 
 app.post('/play/:id', (req, res) => {
@@ -55,14 +48,7 @@ app.post('/play/:id', (req, res) => {
             return res.redirect(`/victory/p0lYm8ilqz`)
         }
     } else {
-        res.render('level', {
-            level: currentLevel.level,
-            route: currentLevel.route, // Pass route so the form action stays accurate
-            introText: "Try again!",
-            levelHeader: currentLevel.levelHeader,
-            levelObjective: currentLevel.levelObjective,
-            levelMain: currentLevel.levelMain
-        })
+        res.render('level', {...currentLevel, introText: "Try again!"})
     }
 })
 
