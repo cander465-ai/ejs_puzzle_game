@@ -11,7 +11,15 @@
                 </p>
             </div>
             <form class="answer" action="/play/<%= route %>" method="POST">
-                <input type="text" name="userAnswer" placeholder="Type answer here..." required> 
+                <% if (level == 1 || 3 || 4 || 5 ) { %>
+                    <input type="text" name="userAnswer" placeholder="Type answer here..." required> 
+                <% }else{  %> 
+                    <input type="text" class="tile" name="letters[]" maxlength="1" required>
+                    <input type="text" class="tile" name="letters[]" maxlength="1" required>
+                    <input type="text" class="tile" name="letters[]" maxlength="1" required>
+                    <input type="text" class="tile" name="letters[]" maxlength="1" required>
+                    <button type="submit" class="submit-btn">Check</button>
+                <% } %>
             </form>
 
 
