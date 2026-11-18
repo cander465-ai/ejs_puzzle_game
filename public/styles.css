@@ -209,6 +209,17 @@ input[type="text"]:focus {
     border: none;
     outline: none;
 }
+.tile{
+    position: relative;
+    background-color: var(--secondary) !important;
+    width: .05vw;
+    height: 7vw;
+    border-radius: 10px;
+    z-index: 10;
+    margin: 10px;
+    text-align: center;
+    font-weight: 900px;
+}
 .level-objective{
     font-size: xx-large;
     font-weight: bold;
