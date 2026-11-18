@@ -18,6 +18,10 @@ app.get(('/play/:id'), (req, res) => {
 
     const currentLevel = levelInfo.find(l => l.route === req.params.id)
 
+    if (!currentLevel) {
+        return res.status(404).render('404')
+    }
+
     
     res.render('level', {
         level: currentLevel.level,
@@ -34,7 +38,7 @@ app.post('/play/:id', (req, res) => {
     const currentLevel = levelInfo.find(l => l.route === req.params.id)
 
     if (!currentLevel) {
-        return res.status(404).send('Level not found')
+        return res.status(404).render('404')
     }
 
     // 2. Normalize both strings so casing and spaces match
@@ -48,7 +52,7 @@ app.post('/play/:id', (req, res) => {
             res.redirect(`/play/${nextLevel.route}`)
         } else {
             // 4. Use backticks so the actual route is inserted
-            res.redirect(`/victory/${currentLevel.route}`)
+            res.redirect(`/victory/p0lYm8ilqz`)
         }
     } else {
         res.render('level', {
@@ -63,9 +67,12 @@ app.post('/play/:id', (req, res) => {
 })
 
 
-
 app.get(('/victory/:id'), (req, res) => {
-
+    if (req.params.id === "p0lYm8ilqz") {
+        res.render('victory')
+    } else {
+        return res.status(404).render('404')
+    }
 })
 
 app.listen(5000, ()=>{
