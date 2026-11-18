@@ -49,10 +49,10 @@ app.post('/play/:id', (req, res) => {
         if (currentLevel.level !== 6) {
             // 3. Safely find the next level using currentLevel.level + 1
             const nextLevel = levelInfo.find(l => l.level === currentLevel.level + 1)
-            res.redirect(`/play/${nextLevel.route}`)
+            return res.redirect(`/play/${nextLevel.route}`)
         } else {
             // 4. Use backticks so the actual route is inserted
-            res.redirect(`/victory/p0lYm8ilqz`)
+            return res.redirect(`/victory/p0lYm8ilqz`)
         }
     } else {
         res.render('level', {
@@ -73,6 +73,10 @@ app.get(('/victory/:id'), (req, res) => {
     } else {
         return res.status(404).render('404')
     }
+})
+
+app.use((req, res) => { // catches everything else and throws a 404
+    res.status(404).render('404')
 })
 
 app.listen(5000, ()=>{
