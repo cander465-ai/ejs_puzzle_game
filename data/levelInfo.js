@@ -11,6 +11,7 @@ let levelInfo = [
         And beat with historys frozen Heart.
         Though silent am I, I speak of the past-
         What am I?`,
+        status: 'text',
         correctAnswer: "museum"
     },
     {
@@ -24,6 +25,7 @@ let levelInfo = [
         They demand, “GET OUT!”
         
         What do you do?`,
+        status: 'wordladder',
         correctAnswer: "runaway"
     },
     {
@@ -36,6 +38,7 @@ let levelInfo = [
         levelMain: `Before you, a statue of Julius Caesar. 
         To his right, what looks to be a door yet it is blocked.
         He holds a plate that says, “Zkr dp L”`,
+        status: 'text',
         correctAnswer: "who am i"
     },
     {
@@ -47,6 +50,7 @@ let levelInfo = [
         levelHeader: "LEVEL FOUR : HALLWAY HOPE",
         levelObjective: "Decrypt the message to progress.",
         levelMain: `This puzzle is much less intimidating, yet its pretty cramped in here so the faster you get it done the better. The Plate on the wall says “ZTYZHS” which makes you want to bash your head against it.`,
+        status: 'text',
         correctAnswer: "atbash"
     },
     {
@@ -61,6 +65,7 @@ let levelInfo = [
         Let go of "correct," let the other remain,
         Learn what I am—I am plain to explain.
         Which way do you go?`,
+        status: 'text',
         correctAnswer: "left"
     },
     {
@@ -72,6 +77,7 @@ let levelInfo = [
         levelObjective: "Complete the word ladder to progress.",
         levelMain: `The Ghost Guards the exit, Clearly his intentions have changed as he wobbily aims the spear at you. 
         What do you do?`,
+        status: 'wordladder',
         correctAnswer: "grabit"
     },
 
