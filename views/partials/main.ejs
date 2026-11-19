@@ -21,6 +21,7 @@
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
+                    <button type="submit" class="submit">Submit</button>
                 <% }else{ %>
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
@@ -28,11 +29,24 @@
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
                     <input type="text" class="tile" name="letters[]" maxlength="1" required>
+                    <button type="submit" class = "submit">Submit</button>
                 <% } %>
             </form>
 
 
         </main>
-
+        <script>
+            const tiles = [...document.querySelectorAll('.tile')];
+            tiles.forEach((tile, i) => {
+            tile.addEventListener('input', () => {
+                if (tile.value && tiles[i + 1]) tiles[i + 1].focus();
+            });
+                tile.addEventListener('keydown', e => {
+                if (e.key === 'Backspace' && !tile.value && tiles[i - 1]) {
+            tiles[i - 1].focus();
+            }
+        });
+        });
+</script>
 </body>
 </html>

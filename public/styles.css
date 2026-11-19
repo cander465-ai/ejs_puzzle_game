@@ -220,6 +220,16 @@ input[type="text"]:focus {
     text-align: center;
     font-weight: 900px;
 }
+.submit{
+    background-color: #724A24;
+    margin: 20px;
+    color: #d9c19D;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-family: "Font 91";
+    font-size: larger;
+}
 .level-objective{
     font-size: xx-large;
     font-weight: bold;

@@ -35,8 +35,12 @@ app.post('/play/:id', (req, res) => {
     }
 
     // 2. Normalize both strings so casing and spaces match
-    const submittedAnswer = String(req.body.userAnswer || '').trim().toLowerCase()
-    const correctAnswer = String(currentLevel.correctAnswer).trim().toLowerCase()
+// tile levels send letters[], text levels send userAnswer
+let raw = req.body.letters ?? req.body.userAnswer ?? ''
+if (Array.isArray(raw)) raw = raw.join('')
+
+const submittedAnswer = String(raw).trim().toLowerCase()
+const correctAnswer = String(currentLevel.correctAnswer).trim().toLowerCase()
 
     if (submittedAnswer === correctAnswer) {
         if (currentLevel.level !== 6) {
